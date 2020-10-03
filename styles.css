@@ -20,7 +20,7 @@ html, body{
 #wrapper {
     width:100%;
     height: 100%;
-    background-color: -webkit-gradient(linear, left bottom, right top, from(#51460b), color-stop(#69622a), color-stop(#828049), color-stop(#9b9e6a), color-stop(#b5be8c), color-stop(#abc398), color-stop(#a4c6a5), color-stop(#a0c9b2), color-stop(#83aea8), color-stop(#709398), color-stop(#637882), to(#575e67));
+    background-image: -webkit-gradient(linear, left bottom, right top, from(#51460b), color-stop(#69622a), color-stop(#828049), color-stop(#9b9e6a), color-stop(#b5be8c), color-stop(#abc398), color-stop(#a4c6a5), color-stop(#a0c9b2), color-stop(#83aea8), color-stop(#709398), color-stop(#637882), to(#575e67));
     background-image: -o-linear-gradient(left bottom, #51460b, #69622a, #828049, #9b9e6a, #b5be8c, #abc398, #a4c6a5, #a0c9b2, #83aea8, #709398, #637882, #575e67);
     background-image: linear-gradient(to right top, #51460b, #69622a, #828049, #9b9e6a, #b5be8c, #abc398, #a4c6a5, #a0c9b2, #83aea8, #709398, #637882, #575e67);
     background-repeat: no-repeat;
@@ -28,9 +28,24 @@ html, body{
     padding: 2em 0 2em 0;
 }
 
+/*  profile */
 .profile__container{    
     margin:auto auto;
     width:80%;
     max-width:1000px;
 }
 
+
+
+
+/* photos */
+#photos-card__container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 34.75% 1.3em 34.75% 1.3em 34.75%;
+    grid-template-columns: 34.75% 34.75% 34.75%;
+    grid-gap: 1.3em;
+    width: 100%;
+   
+    padding:1.3em 0 0 .5em;
+}
