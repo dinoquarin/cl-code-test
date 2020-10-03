@@ -22,9 +22,14 @@ fetch(myRequest)
 
 
         document.getElementById('user-profile__container').innerHTML += ` 
-        <img src="${userPhoto}" />
-        <h1>${userName }</h1>
-        ${userBio}</br>
+        <div class="user-profile--img"><img src="${userPhoto}" /></div>
+            <div class="user-profile--bio-container">
+                <h1 class="user-profile--name">${userName }</h1>
+                <div class="user-profile__bio">
+                    <div class="bio--title">Bio</div>
+                    ${userBio}
+                </div>
+            </div>
         ${userPhone}</br>
         ${userEmail}
         `;
@@ -35,14 +40,25 @@ fetch(myRequest)
 
         Object.keys(photosList).forEach(function (item) {
             document.getElementById('photos-card__container').innerHTML += `
-            <img src="${photosList[item].img}" />
-            ${photosList[item].title}<br/>
-            ${photosList[item].description}<br/>
-            ${photosList[item].featured}<br/>
-            ${photosList[item].date}
+            <div class="photos-card">
+                <div class="photos-card--img">
+                    <div class="photos-card--title">${photosList[item].title}</div>
+                    <img src="${photosList[item].img}" />
+                </div>
+                <div class="photos-card--description">
+                <p>${photosList[item].description}</p>
+                <div class="photos-card--featured">${photosList[item].featured}</div>
+                <div class="photos-card--date">${photosList[item].date}</div>
+            </div>
+            </div>
+           
             `;
         });    
 
-
+         // ${photosList[item].title}<br/>
+            // ${photosList[item].description}<br/>
+            // ${photosList[item].featured}<br/>
+            // ${photosList[item].date}
+            
     // end fetch request    
     });
